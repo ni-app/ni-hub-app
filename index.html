@@ -20,7 +20,7 @@
       <nav class="nav-links" aria-label="เมนูหลัก">
         <a class="nav-link active" href="#overview"><span class="nav-icon">▦</span>ภาพรวม</a>
         <a class="nav-link" href="#digits"><span class="nav-icon">◷</span>สถิติตัวเลข</a>
-        <a class="nav-link" href="#suggestions"><span class="nav-icon">✳</span>เลขที่พบในข้อมูล</a>
+        <a class="nav-link" href="#suggestions"><span class="nav-icon">✳</span>แนวทางงวดหน้า</a>
         <a class="nav-link" href="#history"><span class="nav-icon">▤</span>ผลย้อนหลัง</a>
       </nav>
       <div class="sidebar-bottom">
@@ -52,6 +52,12 @@
         <button id="export-btn" class="export-button"><span>⇩</span> ดาวน์โหลด CSV</button>
       </section>
 
+      <section id="suggestions" class="panel suggestion-panel prediction-panel">
+        <div class="suggestion-head"><div><div class="eyebrow small-eyebrow">NEXT DRAW · HISTORICAL FREQUENCY</div><h2>แนวทางเลขงวดหน้า</h2><p class="panel-description">5 เลขท้าย 2 ตัวที่พบมากสุดในช่วงย้อนหลังที่เลือก · เรียงตามความถี่</p></div><span class="not-prediction">แนวทางจากสถิติย้อนหลัง</span></div>
+        <div id="suggestion-list" class="suggestion-list"></div>
+        <div class="caution"><span>!</span><p><strong>โปรดอ่านก่อนนำไปใช้</strong> ผลสลากแต่ละงวดเป็นอิสระต่อกัน ความถี่ในอดีตไม่ได้เพิ่มโอกาสถูกรางวัล เลขเหล่านี้เป็นเพียงตัวเลือกจากข้อมูลย้อนหลัง ไม่ใช่คำทำนายที่รับประกันผล</p></div>
+      </section>
+
       <section class="stat-grid" aria-label="ตัวเลขสรุป">
         <article class="stat-card"><div class="stat-top"><span>จำนวนงวดที่วิเคราะห์</span><span class="stat-icon purple">▤</span></div><div class="stat-value" id="draw-count">—</div><div class="stat-sub">งวดในช่วงที่เลือก</div></article>
         <article class="stat-card"><div class="stat-top"><span>เลขท้าย 2 ตัวที่พบบ่อย</span><span class="stat-icon teal">⌁</span></div><div class="stat-value accent-teal" id="top-pair">—</div><div class="stat-sub" id="top-pair-note">ความถี่สูงสุดในชุดข้อมูล</div></article>
@@ -73,12 +79,6 @@
           <div class="digit-list" id="digit-list"></div>
           <div class="digit-footnote"><span class="mini-info">i</span> ความถี่มากกว่าไม่ได้หมายความว่าจะมีโอกาสออกงวดหน้าสูงกว่า</div>
         </article>
-      </section>
-
-      <section id="suggestions" class="panel suggestion-panel">
-        <div class="suggestion-head"><div><div class="eyebrow small-eyebrow">NEXT DRAW · HISTORICAL FREQUENCY</div><h2>แนวทางเลขงวดหน้า</h2><p class="panel-description">แสดง 5 เลขท้าย 2 ตัวที่พบมากสุดในช่วงย้อนหลังที่เลือก เรียงตามความถี่</p></div><span class="not-prediction">แนวทางจากสถิติ · ไม่รับประกันผล</span></div>
-        <div id="suggestion-list" class="suggestion-list"></div>
-        <div class="caution"><span>!</span><p><strong>โปรดอ่านก่อนนำไปใช้</strong> ผลสลากแต่ละงวดเป็นอิสระต่อกัน ความถี่ในอดีตไม่ทำให้เลขใดมีโอกาสถูกรางวัลมากขึ้น ตัวเลขข้างต้นไม่มีความได้เปรียบเหนือการสุ่ม และไม่ควรใช้เป็นเหตุผลในการเสี่ยงเกินกำลัง</p></div>
       </section>
 
       <section id="history" class="panel history-panel">
